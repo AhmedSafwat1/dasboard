@@ -20,7 +20,6 @@ function menu()
         {
             if(isset($value->getAction()['title']) && !isset($value->getAction()['front']) && isset($value->getAction()['icon']))
             {
-                $arr = [];
                 if(isset($value->getAction()['child']) && isset($value->getAction()['subTitle']) && isset($value->getAction()['subIcon']))
                 {
                     $arr = [];

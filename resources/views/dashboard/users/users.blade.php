@@ -198,7 +198,7 @@
 	        		</div>
 
 			        <div class="col-sm-12" style="margin-top: 10px">
-				      	<button type="submit" class="btn btn-primary addCategory"">اضافه</button>
+				      	<button type="submit" class="btn btn-primary addCategory">اضافه</button>
 				        <button type="button" class="btn btn-secondary" data-dismiss="modal">أغلاق</button>
 			        </div>
 
@@ -279,7 +279,7 @@
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 			  <div class="modal-header">
-			    <h5 class="modal-title" id="exampleModalLabel">مراسلة جميع الاعضاء</span></h5>
+			    <h5 class="modal-title" id="exampleModalLabel">مراسلة جميع الاعضاء</h5>
 			  </div>
 			  <div class="modal-body">
 			    <div class="row">
@@ -304,7 +304,7 @@
 							    		</div>
 
 								        <div class="col-sm-12" style="margin-top: 10px">
-									      	<button type="submit" class="btn btn-primary addCategory"">ارسال</button>
+									      	<button type="submit" class="btn btn-primary addCategory">ارسال</button>
 									        <button type="button" class="btn btn-secondary" data-dismiss="modal">أغلاق</button>
 								        </div>
 							    	</form>
@@ -321,7 +321,7 @@
 							    		</div>
 
 								        <div class="col-sm-12" style="margin-top: 10px">
-									      	<button type="submit" class="btn btn-primary addCategory"">ارسال</button>
+									      	<button type="submit" class="btn btn-primary addCategory">ارسال</button>
 									        <button type="button" class="btn btn-secondary" data-dismiss="modal">أغلاق</button>
 								        </div>
 							    	</form>
@@ -338,7 +338,7 @@
 							    		</div>
 
 								        <div class="col-sm-12" style="margin-top: 10px">
-									      	<button type="submit" class="btn btn-primary addCategory"">ارسال</button>
+									      	<button type="submit" class="btn btn-primary addCategory">ارسال</button>
 									        <button type="button" class="btn btn-secondary" data-dismiss="modal">أغلاق</button>
 								        </div>
 							    	</form>
@@ -385,7 +385,7 @@
 							    		</div>
 
 								        <div class="col-sm-12" style="margin-top: 10px">
-									      	<button type="submit" class="btn btn-primary addCategory"">ارسال</button>
+									      	<button type="submit" class="btn btn-primary addCategory">ارسال</button>
 									        <button type="button" class="btn btn-secondary" data-dismiss="modal">أغلاق</button>
 								        </div>
 							    	</form>
@@ -403,7 +403,7 @@
 							    		</div>
 
 								        <div class="col-sm-12" style="margin-top: 10px">
-									      	<button type="submit" class="btn btn-primary addCategory"">ارسال</button>
+									      	<button type="submit" class="btn btn-primary addCategory">ارسال</button>
 									        <button type="button" class="btn btn-secondary" data-dismiss="modal">أغلاق</button>
 								        </div>
 							    	</form>
@@ -421,7 +421,7 @@
 							    		</div>
 
 								        <div class="col-sm-12" style="margin-top: 10px">
-									      	<button type="submit" class="btn btn-primary addCategory"">ارسال</button>
+									      	<button type="submit" class="btn btn-primary addCategory">ارسال</button>
 									        <button type="button" class="btn btn-secondary" data-dismiss="modal">أغلاق</button>
 								        </div>
 							    	</form>
