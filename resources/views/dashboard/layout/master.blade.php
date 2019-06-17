@@ -121,36 +121,44 @@
 	jQuery(function($){
 	var fileDiv = document.getElementById("upload");
 	var fileInput = document.getElementById("upload-image");
-	console.log(fileInput);
-	fileInput.addEventListener("change",function(e){
-	  var files = this.files
-	  showThumbnail(files)
-	},false)
 
-	fileDiv.addEventListener("click",function(e){
-	  $(fileInput).show().focus().click().hide();
-	  e.preventDefault();
-	},false)
+	// check if file input found
+	if(fileInput)
+	{
+		fileInput.addEventListener("change",function(e){
+			var files = this.files
+			showThumbnail(files)
+		},false)
 
-	fileDiv.addEventListener("dragenter",function(e){
-	  e.stopPropagation();
-	  e.preventDefault();
-	},false);
+	}
+	//check fileDiv found
+	if(fileDiv)
+	{
+		fileDiv.addEventListener("click",function(e){
+			$(fileInput).show().focus().click().hide();
+			e.preventDefault();
+		},false)
 
-	fileDiv.addEventListener("dragover",function(e){
-	  e.stopPropagation();
-	  e.preventDefault();
-	},false);
+		fileDiv.addEventListener("dragenter",function(e){
+			e.stopPropagation();
+			e.preventDefault();
+		},false);
 
-	fileDiv.addEventListener("drop",function(e){
-	  e.stopPropagation();
-	  e.preventDefault();
+		fileDiv.addEventListener("dragover",function(e){
+			e.stopPropagation();
+			e.preventDefault();
+		},false);
 
-	  var dt = e.dataTransfer;
-	  var files = dt.files;
+		fileDiv.addEventListener("drop",function(e){
+			e.stopPropagation();
+			e.preventDefault();
 
-	  showThumbnail(files)
-	},false);
+			var dt = e.dataTransfer;
+			var files = dt.files;
+
+			showThumbnail(files)
+		},false);
+	}
 
 	function showThumbnail(files){
 	  for(var i=0;i<files.length;i++){

@@ -14,6 +14,12 @@ use App\Permission;
 function menu()
 {
     $routes = Route::getRoutes();
+    $arr = [];
+    $permission = Permission::where('role_id',Auth::user()->role)->select('permissions')->get();
+    foreach($permission as $key=>$per)
+    {
+        $arr[$key] = $per->permissions;
+    }
     foreach ($routes as $value)
     {
         if($value->getName() !== null)
@@ -22,12 +28,7 @@ function menu()
             {
                 if(isset($value->getAction()['child']) && isset($value->getAction()['subTitle']) && isset($value->getAction()['subIcon']))
                 {
-                    $arr = [];
-                    $permission = Permission::where('role_id',Auth::user()->role)->select('permissions')->get();
-                    foreach($permission as $key=>$per)
-                    {
-                        $arr[$key] = $per->permissions;
-                    }
+
 
                     if(in_array($value->getName(),$arr))
                     {
@@ -59,18 +60,13 @@ function menu()
 
                 }else if(isset($value->getAction()['child']) && isset($value->getAction()['icon']))
                 {
+
                     if(in_array($value->getName(),$arr))
                     {
                         echo '<li><a href="'.route($value->getName()).'">'.$value->getAction()['title'].$value->getAction()['icon'].'</a></li>';
                     }
                 }else if(!isset($value->getAction()['child']) && isset($value->getAction()['icon']) && !isset($value->getAction()['hasFather']))
                 {
-                    $arr = [];
-                    $permission = Permission::where('role_id',Auth::user()->role)->select('permissions')->get();
-                    foreach($permission as $key=>$per)
-                    {
-                        $arr[$key] = $per->permissions;
-                    }
                     if(in_array($value->getName(),$arr))
                     {
                         echo '<li><a href="'.route($value->getName()).'">'.$value->getAction()['title'].$value->getAction()['icon'].'</a></li>';
