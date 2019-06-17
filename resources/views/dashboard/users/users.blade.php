@@ -90,7 +90,7 @@
 					<td>{{$u->name}}</td>
 					<td>{{$u->email}}</td>
 					<td>{{$u->phone}}</td>
-					@if(is_null($u->Role) ||count($u->Role->role) < 1 )
+					@if($u->role < 1 )
 					<td>عضو</td>
 					@else
 					<td>{{$u->Role->role}}</td>
