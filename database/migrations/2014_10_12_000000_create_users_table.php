@@ -16,15 +16,20 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('email')->unique();
+            $table->string('email')->unique()->nullable();
             $table->string('password');
             $table->string('phone')->unique();
             $table->string('code')->nullable();
             $table->string('avatar')->default('default.png');
-            $table->string('arrears')->default('0');
             $table->integer('active')->default(0);
             $table->integer('role')->default('0');
             $table->string('device_id',500)->nullable();
+            $table->string('device_type')->nullable();
+            $table->integer('confirm')->default('0');
+            $table->float("lat")->nullable();
+            $table->float("lng")->nullable();
+            $table->string("address")->nullable();
+            $table->string('lang')->nullable();
             $table->rememberToken();
             $table->timestamps();
 
@@ -37,7 +42,7 @@ class CreateUsersTable extends Migration
         $user->password =bcrypt(111111);
         $user->phone ='123456789';
         $user->avatar ='default.png';
-        $user->arrears ='100';
+//        $user->arrears ='100';
         $user->active ='1';
         $user->role ='1';
         $user->device_id ='1111111111';

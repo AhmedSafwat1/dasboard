@@ -54,7 +54,7 @@ class UsersController extends Controller
         Image::make($photo)->save('dashboard/uploads/users/'.$name);
         $user->avatar=$name;
 		$user->save();
-        Report(Auth::user()->id,'بأضافة عضو جديد');
+        AdminReport(Auth::user()->id,'بأضافة عضو جديد');
 		Session::flash('success','تم اضافة العضو');
 		return back();
     }
@@ -133,7 +133,7 @@ class UsersController extends Controller
         }
 
 		$user->save();
-        Report(Auth::user()->id,'بتحديث بيانات  '.$user->name);
+        AdminReport(Auth::user()->id,'بتحديث بيانات  '.$user->name);
 		Session::flash('success','تم حفظ التعديلات');
 		return back();
     }
@@ -150,7 +150,7 @@ class UsersController extends Controller
             $user = User::findOrFail($request->id);
             File::delete('dashboard/uploads/users/'.$user->photo);
             $user->delete();
-            Report(Auth::user()->id,'بحذف العضو '.$user->name);
+            AdminReport(Auth::user()->id,'بحذف العضو '.$user->name);
             Session::flash('success','تم الحذف');
             return back();
         }

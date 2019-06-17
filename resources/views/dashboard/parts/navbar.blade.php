@@ -32,13 +32,14 @@
 							<li class="media">
 								<div class="media-left">
 
-								<div class="media-body">
-									<a href="{{route('showmessage',$n->id)}}" class="media-heading">
-										<span class="text-semibold">{{$n->name}}</span>
-										<span class="media-annotation pull-right">{{$n->created_at->diffForHumans()}}</span>
-									</a>
+									<div class="media-body">
+										<a href="{{route('showmessage',$n->id)}}" class="media-heading">
+											<span class="text-semibold">{{$n->name}}</span>
+											<span class="media-annotation pull-right">{{$n->created_at->diffForHumans()}}</span>
+										</a>
 
-									<span class="text-muted">{{str_limit($n->message,30)}}</span>
+										<span class="text-muted">{{Str::limit($n->message,30)}}</span>
+									</div>
 								</div>
 							</li>
 							<hr>

@@ -29,7 +29,7 @@ function Home()
 function Role()
 {
     $role = Role::findOrFail(Auth::user()->role);
-    if(count($role) > 0)
+    if(isset($role))
     {
         return $role->role;
     }else{
@@ -68,7 +68,7 @@ function save_img($base64_img, $img_name, $path)
 
 
 #report
-function Report($user_id,$event)
+function AdminReport($user_id,$event)
 {
 	$report = new Report;
 	$user = User::findOrFail($user_id);
